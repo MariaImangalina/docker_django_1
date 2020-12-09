@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users list</title>
+    <link rel='stylesheet' href="{% static 'css/mystyle.css' %}">
+</head>
+<body>
+    <div>
+        {% if persons %}
+            <table>
+                <thead>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                </thead>
+                {% for item in persons %}
+                <tr>
+                    <td>{{ item.first_name }}</td>
+                    <td>{{ item.last_name }}</td>
+                    <td>{{ item.email }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        {% else %}
+            <p>No users found</p>
+        {% endif %}
+    </div>
+    
+</body>
+</html>
