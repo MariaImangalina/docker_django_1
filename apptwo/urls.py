@@ -21,4 +21,7 @@ urlpatterns = [
     path('', users),
     path('help/', help),
     path('signup/', sign_up),
+    path('name/', name_view),
+    path('api/', NameApiView.as_view()),
+
 ]
