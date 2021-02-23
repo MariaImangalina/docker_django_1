@@ -13,5 +13,4 @@ RUN pip install -r /web_app/requirements.txt
 
 EXPOSE 7000
 
-CMD [ "python", "./manage.py", "runserver", "0.0.0.0:7000" ]
-
+CMD [ "python", "./manage.py", "runserver", "0.0.0.0:8000" ]
